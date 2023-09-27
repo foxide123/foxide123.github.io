@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+    <script>
+        function redirectBackToApp() {
+            let urlParams = new URLSearchParams(window.location.search);
+            let code = urlParams.get('code');
+            let scope = urlParams.get('scope');
+
+            let appUri = `com.example.bikepacking://osm/${code}/${scope}`;
+            
+            // Redirect to your app
+            window.location.href = appUri;
+        }
+    </script>
+</head>
+<!--<body onload="redirectBackToApp()">-->
+<body>
+    <button onclick="redirectBackToApp()">Go back to app (OSM auth)</button>
+</body>
+</body>
+</html>
