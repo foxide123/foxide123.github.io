@@ -9,8 +9,8 @@
             let urlParams = new URLSearchParams(window.location.search);
             let code = urlParams.get('code');
             let scope = urlParams.get('scope');
-
-            let appUri = `com.example.bikepacking://oauth/${code}/${scope}`;
+            let appUri = `com.example.bikepacking://deviceGpxFiles/${code}/${scope}`;
+            //let appUri = `com.example.bikepacking://oauth/${code}/${scope}`;
             
             // Redirect to your app
             window.location.href = appUri;
